@@ -103,7 +103,7 @@ graphhopper:
 
 
   # Sort the graph after import to make requests roughly ~10% faster. Note that this requires significantly more RAM on import.
-  graph.do_sort: true
+  # graph.do_sort: true
 
 
 
