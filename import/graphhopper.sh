@@ -234,7 +234,7 @@ else
    LINK="http://download.geofabrik.de/$LINK-latest.osm.pbf"
 fi
 
-: "${JAVA_OPTS:=-Xmx188000m -Xms188000m -server -Xconcurrentio -XX:+HeapDumpOnOutOfMemoryError}"
+: "${JAVA_OPTS:=-Xmx180000m -Xms180000m -server -Xconcurrentio -XX:+HeapDumpOnOutOfMemoryError}"
 : "${JAR:=web/target/graphhopper-web-$VERSION.jar}"
 : "${GRAPH:=$DATADIR/$NAME-gh}"
 
