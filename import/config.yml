@@ -133,7 +133,7 @@ graphhopper:
 server:
   applicationConnectors:
   - type: http
-    port: 80
+    port: 8989
     # for security reasons bind to localhost
     bindHost: localhost
   requestLog:
