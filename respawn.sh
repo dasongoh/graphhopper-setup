@@ -22,15 +22,17 @@ fi
 
 PNAME=$1
 STIME=$2
+RESPAWN=false
 
-while [ true ]
-
-do
-        sleep $STIME
-        if ps ax | grep -v grep | $PNAME > /dev/null
-        then
-                logger -i -s -t respawn.sh "$PNAME stopped. Restarting in $STIME seconds."
-        else
-                $PNAME &
-        fi
+while true; do
+  if [ "$RESPAWN" != "true" ] && ! pgrep "java"
+  then
+    logger -i -s -t respawn.sh "$PNAME stopped. Restarting in $STIME seconds."
+    RESPAWN=true
+  elif [ "$RESPAWN" = "true" ]
+  then
+    $PNAME &
+    RESPAWN=false
+  fi
+  sleep $STIME
 done
