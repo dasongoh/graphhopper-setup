@@ -1,3 +1,3 @@
 #!/bin/bash
 cd ~/graphhopper
-./respawn.sh './graphhopper.sh -a web -i planet-latest.osm.pbf -d --port 80 &' 60 &
+./respawn.sh './graphhopper.sh web planet-latest.osm.pbf &' 60 &
