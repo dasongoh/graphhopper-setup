@@ -217,7 +217,7 @@ echo "## now $ACTION. JAVA_OPTS=$JAVA_OPTS"
 if [ "$ACTION" = "ui" ] || [ "$ACTION" = "web" ]; then
   export MAVEN_OPTS="$MAVEN_OPTS $JAVA_OPTS"
   if [ "$JETTY_PORT" = "" ]; then
-    JETTY_PORT=8989
+    JETTY_PORT=80
   fi
   WEB_JAR="$GH_HOME/web/target/graphhopper-web-$VERSION-with-dep.jar"
   if [ ! -s "$WEB_JAR" ]; then
