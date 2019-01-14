@@ -206,7 +206,7 @@ else
 fi
 
 if [ "$JAVA_OPTS" = "" ]; then
-  JAVA_OPTS="-Xmx61000m -Xms61000m -server -Xconcurrentio -XX:+HeapDumpOnOutOfMemoryError -XX:+UnlockExperimentalVMOptions -XX:+UseZGC"
+  JAVA_OPTS="-Xmx60g -Xms60g -server -Xconcurrentio -XX:+HeapDumpOnOutOfMemoryError"
 fi
 
 ensureOsm
