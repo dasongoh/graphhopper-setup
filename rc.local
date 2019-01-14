@@ -11,6 +11,14 @@
 #
 # By default this script does nothing.
 
+swapoff -a
+
+systemctl stop rsyslog.service
+systemctl disable rsyslog.service
+
+systemctl stop systemd-journald.service
+systemctl disable systemd-journald.service
+
 graphhopper
 
 exit 0
